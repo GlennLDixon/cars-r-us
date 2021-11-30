@@ -43,7 +43,7 @@ const database = {
             price: 899
         }
     ],
-    Technology: [
+    technology: [
         {
             id: 1,
             package: "Basic Package (basic sound system)",
@@ -84,7 +84,23 @@ const database = {
         {
             id: 4,
             type: "18-inch pair Spoke Black",
-            price:1099
+            price: 1099
         }
     ]
+}
+
+export const getPaintColor = () => {
+    return database.paintColor.map(paint => ({...paint}))
+}
+
+export const getInterior = () => {
+    return database.interior.map(fabric => ({...fabric}))
+}
+
+export const getTechnology = () => {
+    return database.technology.map(tech => ({...tech}))
+}
+
+export const getWheels = () => {
+    return database.wheels.map(wheel => ({...wheel}))
 }
