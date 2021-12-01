@@ -89,6 +89,15 @@ const database = {
             type: "18-inch pair Spoke Black",
             price: 1099
         }
+    ],
+    customOrder: [
+        {
+            id: 1,
+            paintId: 2,
+            interiorId: 4,
+            techId: 1,
+            wheelId: 3
+        }
     ]
 }
 
