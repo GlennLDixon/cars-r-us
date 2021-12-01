@@ -1,3 +1,9 @@
 import { CarPackage } from "./CarPackage.js"
 
-const mainConatiner = document.querySelector("#Conatiner")
+const mainContainer = document.querySelector("#container")
+
+const renderAllHTML = () => {
+    mainContainer.innerHTML = CarPackage()
+}
+
+renderAllHTML()
