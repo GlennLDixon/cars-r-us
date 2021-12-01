@@ -68,7 +68,7 @@ const database = {
             price: 2599
         }
     ],
-    wheels = [
+    wheels: [
         {
             id: 1,
             type: "17-inch pair Radial",
