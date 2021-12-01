@@ -1,0 +1,19 @@
+.choices {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.options h1 {
+    text-align: center;
+}
+
+.options  {
+    text-align: center;
+    margin: 0 2rem;
+    flex-basis: 24%;
+    border: 1px inset red;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(143,143,143);
+}
