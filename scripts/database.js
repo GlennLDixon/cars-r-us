@@ -1,4 +1,7 @@
 const database = {
+    orderBuilder: {
+
+    },
     paintColor: [
         {
             id: 1,
@@ -89,6 +92,8 @@ const database = {
     ]
 }
 
+
+// Getter functions
 export const getPaintColor = () => {
     return database.paintColor.map(paint => ({...paint}))
 }
@@ -103,4 +108,21 @@ export const getTechnology = () => {
 
 export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
+}
+
+
+// Setter functions
+export const setPaintColor = (id) => {
+    database.paintColor.paintId = id
+}
+
+export const setInterior = (id) => {
+    database.interior.interiorId = id
+}
+
+export const setTechnology = (id) => {
+    database.technology.techId = id
+}
+export const setWheels = (id) => {
+    database.wheels.wheelId = id
 }
