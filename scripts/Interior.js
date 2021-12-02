@@ -10,7 +10,7 @@ document.addEventListener(
             let intId = parseInt(event.target.value)
             for (const int of interior) {
                 if (intId === int.id) {
-                    setWheels(int.color)
+                    setInterior(int.color)
                 }
             }
         }

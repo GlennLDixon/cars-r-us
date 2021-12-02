@@ -10,7 +10,7 @@ document.addEventListener(
             let paintId = parseInt(event.target.value)
             for (const paint of paintColor) {
                 if (paintId === paint.id) {
-                    setWheels(paint.color)
+                    setPaintColor(paint.color)
                 }
             }
         }

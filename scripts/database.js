@@ -96,7 +96,8 @@ const database = {
             paintId: 2,
             interiorId: 4,
             techId: 1,
-            wheelId: 3
+            wheelId: 3,
+            timesStamp: 1216548215145
         }
     ]
 }
@@ -134,4 +135,19 @@ export const setTechnology = (id) => {
 }
 export const setWheels = (id) => {
     database.wheels.wheelId = id
+}
+
+export const addCustomOrder = () => {
+    const newOrder = {...database.orderBuilder}
+
+    const lastIndex = database.customOrder.length - 1
+    newOrder.id = database.customOrder[lastIndex].id + 1
+
+    newOrder.timesStamp = Date.now()
+
+    database.customOrder.push(newOrder)
+
+    database.orderBuilder = {}
+
+    dispatchEvent.customEvent("stateChange" )
 }

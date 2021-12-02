@@ -10,7 +10,7 @@ document.addEventListener(
             let techId = parseInt(event.target.value)
             for (const tech of technology) {
                 if (techId === tech.id) {
-                    setWheels(tech.type)
+                    setTechnology(tech.type)
                 }
             }
         }
