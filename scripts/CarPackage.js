@@ -1,6 +1,6 @@
 import { Interior } from "./Interior.js"
 import { PaintColor } from "./PaintColor.js"
-// import { technology } from "./Technology.js"
+import { Technology } from "./Technology.js"
 // import { wheels } from "./Wheels.js"
 
 document.addEventListener(
@@ -25,6 +25,7 @@ export const CarPackage = () => {
                 </section>
                 <section class="choices__tech options">
                     <h2>Technology</h2>
+                    ${Technology()}
                 </section>
                 <section class="choices__wheels options">
                     <h2>Wheels</h2>
