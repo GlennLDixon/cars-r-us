@@ -1,5 +1,5 @@
 import { Interior } from "./Interior.js"
-// import { paintColor } from "./PaintColor.js"
+import { PaintColor } from "./PaintColor.js"
 // import { technology } from "./Technology.js"
 // import { wheels } from "./Wheels.js"
 
@@ -17,6 +17,7 @@ export const CarPackage = () => {
         <article class="choices">
                 <section class="choices__paint options">
                     <h2>Paint Color</h2>
+                    ${PaintColor()}
                 </section>
                 <section class="choices__interior options">
                     <h2>Interior</h2>

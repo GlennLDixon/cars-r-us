@@ -1,11 +1,13 @@
-import { getInterior } from "./database.js";
+import { getInterior, setInterior} from "./database.js";
 
 const interior = getInterior()
 
 document.addEventListener(
     "change",
-    event => {
-
+    (event) => {
+        if (event.target.name === "interior") {
+            setInterior(parseInt(event.target.value))
+        }
     }
 )
 
@@ -15,11 +17,11 @@ export const Interior = () => {
 
     for (const int of interior) {
         html += `<li>
-            <input type="radio" name="metal" value="${int.id}" /> ${int.color} 
+            <input type="radio" name="interior" value="${int.id}" /> ${int.color} 
         </li>`
     }
 
-    html = "</ul>"
+    html += "</ul>"
     return html
 
 }
