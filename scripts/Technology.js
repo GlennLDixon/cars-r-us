@@ -7,6 +7,12 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "technology") {
             setTechnology(parseInt(event.target.value))
+            let techId = parseInt(event.target.value)
+            for (const tech of technology) {
+                if (techId === tech.id) {
+                    setWheels(tech.type)
+                }
+            }
         }
     }
 )

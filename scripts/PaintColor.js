@@ -7,6 +7,12 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "paintColor") {
             setPaintColor(parseInt(event.target.value))
+            let paintId = parseInt(event.target.value)
+            for (const paint of paintColor) {
+                if (paintId === paint.id) {
+                    setWheels(paint.color)
+                }
+            }
         }
     }
 )

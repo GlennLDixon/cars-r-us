@@ -6,7 +6,13 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "wheels") {
-            setWheels(parseInt(event.target.value))
+            // setWheels(parseInt(event.target.value))
+            let tireId = parseInt(event.target.value)
+            for (const tire of tires) {
+                if (tireId === tire.id) {
+                    setWheels(tire.type)
+                }
+            }
         }
     }
 )
