@@ -10,7 +10,7 @@ document.addEventListener(
             let techId = parseInt(event.target.value)
             for (const tech of technology) {
                 if (techId === tech.id) {
-                    setTechnology(tech.type)
+                    setTechnology(tech.name)
                 }
             }
         }
@@ -23,7 +23,7 @@ export const Technology = () => {
 
     for (const tech of technology) {
         html += `<li>
-            <input type="radio" name="technology" value="${tech.id}" /> ${tech.package} 
+            <input type="radio" name="technology" value="${tech.id}" /> ${tech.name} 
         </li>`
     }
 

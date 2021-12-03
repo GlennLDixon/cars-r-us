@@ -10,7 +10,7 @@ document.addEventListener(
             let intId = parseInt(event.target.value)
             for (const int of interior) {
                 if (intId === int.id) {
-                    setInterior(int.color)
+                    setInterior(int.name)
                 }
             }
         }
@@ -23,7 +23,7 @@ export const Interior = () => {
 
     for (const int of interior) {
         html += `<li>
-            <input type="radio" name="interior" value="${int.id}" /> ${int.color} 
+            <input type="radio" name="interior" value="${int.id}" /> ${int.name} 
         </li>`
     }
 

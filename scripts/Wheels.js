@@ -10,7 +10,7 @@ document.addEventListener(
             let tireId = parseInt(event.target.value)
             for (const tire of tires) {
                 if (tireId === tire.id) {
-                    setWheels(tire.type)
+                    setWheels(tire.name)
                 }
             }
         }
@@ -23,7 +23,7 @@ export const Wheels = () => {
 
     for (const tire of tires) {
         html += `<li>
-            <input type="radio" name="wheels" value="${tire.id}" /> ${tire.type} 
+            <input type="radio" name="wheels" value="${tire.id}" /> ${tire.name} 
         </li>`
     }
 

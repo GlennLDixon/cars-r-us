@@ -10,7 +10,7 @@ document.addEventListener(
             let paintId = parseInt(event.target.value)
             for (const paint of paintColor) {
                 if (paintId === paint.id) {
-                    setPaintColor(paint.color)
+                    setPaintColor(paint.name)
                 }
             }
         }
@@ -23,7 +23,7 @@ export const PaintColor = () => {
 
     for (const color of paintColor) {
         html += `<li>
-            <input type="radio" name="paintColor" value="${color.id}" /> ${color.color} 
+            <input type="radio" name="paintColor" value="${color.id}" /> ${color.name} 
         </li>`
     }
 
