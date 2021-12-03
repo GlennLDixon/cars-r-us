@@ -90,14 +90,14 @@ const database = {
             price: 1099
         }
     ],
-    customOrder: [
+    customOrders: [
         {
             id: 1,
             paintId: 2,
             interiorId: 4,
             techId: 1,
             wheelId: 3,
-            timesStamp: 1216548215145
+            timeStamp: 1216548215145
         }
     ]
 }
@@ -121,7 +121,7 @@ export const getWheels = () => {
 }
 
 export const getOrders = () => {
-    return database.customOrder.map(order => ({...order}))
+    return database.customOrders.map(order => ({...order}))
 }
 
 
@@ -144,14 +144,14 @@ export const setWheels = (id) => {
 export const addCustomOrder = () => {
     const newOrder = {...database.orderBuilder}
 
-    const lastIndex = database.customOrder.length - 1
-    newOrder.id = database.customOrder[lastIndex].id + 1
+    const lastIndex = database.customOrders.length - 1
+    newOrder.id = database.customOrders[lastIndex].id + 1
 
     newOrder.timesStamp = Date.now()
 
-    database.customOrder.push(newOrder)
+    database.customOrders.push(newOrder)
 
     database.orderBuilder = {}
 
-    dispatchEvent.customEvent("stateChange" )
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }

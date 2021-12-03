@@ -6,4 +6,8 @@ const renderAllHTML = () => {
     mainContainer.innerHTML = CarPackage()
 }
 
+document.addEventListener('stateChange', () => {
+    renderAllHTML()
+})
+
 renderAllHTML()
