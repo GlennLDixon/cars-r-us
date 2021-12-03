@@ -120,6 +120,10 @@ export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
 }
 
+export const getOrders = () => {
+    return database.customOrder.map(order => ({...order}))
+}
+
 
 // Setter functions
 export const setPaintColor = (id) => {
