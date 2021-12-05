@@ -147,7 +147,7 @@ export const addCustomOrder = () => {
     const lastIndex = database.customOrders.length - 1
     newOrder.id = database.customOrders[lastIndex].id + 1
 
-    newOrder.timesStamp = Date.now()
+    newOrder.timeStamp = Date.now()
 
     database.customOrders.push(newOrder)
 
